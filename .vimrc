@@ -222,6 +222,8 @@ endif
 
 "pathogen
 call pathogen#infect()
+call pathogen#helptags()
+
 
 "補完オプション
 "デフォルト
