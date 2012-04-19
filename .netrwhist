@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/mochida/src/devst_naniwa_myapp/devst_naniwa_myapp/app/views/Application'
-let g:netrw_dirhist_2='/Applications/MacVim.app/Contents/Resources/vim/plugins'
-let g:netrw_dirhist_3='/Applications/MacVim.app/Contents/Resources/vim/plugins/kaoriya'
-let g:netrw_dirhist_4='/Applications/MacVim.app/Contents/Resources/vim/plugins/kaoriya/plugin'
-let g:netrw_dirhist_5='/Applications/MacVim.app/Contents/Resources/vim/runtime/plugin'
-let g:netrw_dirhist_6='/Applications/MacVim.app/Contents/Resources/vim/runtime'
