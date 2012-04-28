@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 10-Apr-2012.
+" Last Change: 28-Apr-2012.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -305,38 +305,23 @@ endif
 "自動インデントの各段階に使われる空白の数。
 set shiftwidth=4
 
-let DictDir = $HOME . "/.vim/wordlists"
-
 "bash
-autocmd FileType bash :set dictionary+=DictDir.'/bash.list'
+autocmd FileType bash :set dictionary+=$HOME/.vim/wordlists/bash.list
 
 "perl
-function! PerlSetting()
-  :set dictionary+=$HOME/.vim/wordlists/perl.list
-  :set iskeyword& " デフォルトに戻す
-  :set expandtab "タブをスペースへ展開する
-endfunction
-autocmd FileType perl call PerlSetting()
+autocmd FileType perl :set dictionary+=$HOME/.vim/wordlists/perl.list
+autocmd FileType perl :set iskeyword& " デフォルトに戻す
+autocmd FileType perl :set expandtab "タブをスペースへ展開する
 
 "c
-function! ClangSetting()
-  :set dictionary+=$HOME/.vim/wordlists/c-c++-keywords.list
-  :set dictionary+=$HOME/.vim/wordlists/k+r.list
-endfunction
-autocmd FileType c call ClangSetting()
-
-function! CClangSetting()
-  :set dictionary+=$VIMRUNTIME/wordlists/c-c++-keywords.list
-  :set dictionary+=$VIMRUNTIME/wordlists/stl_index.list
-endfunction
-autocmd FileType cpp call CClangSetting()
+autocmd FileType c :set dictionary+=$HOME/.vim/wordlists/c-c++-keywords.list
+autocmd FileType c :set dictionary+=$HOME/.vim/wordlists/k+r.list
+autocmd FileType cpp :set dictionary+=$HOME/.vim/wordlists/c-c++-keywords.list
+autocmd FileType cpp :set dictionary+=$HOME/.vim/wordlists/stl_index.list
 
 "PHP
-function! PHPSetting()
-  :set dictionary+=$HOME/.vim/wordlists/PHP.dict
-  :set iskeyword& " デフォルトに戻す
-endfunction
-autocmd FileType php call PHPSetting()
+autocmd FileType php :set dictionary+=$HOME/.vim/wordlists/PHP.dict
+autocmd FileType php :set iskeyword& " デフォルトに戻す
 
 "ruby
 autocmd FileType ruby :set dictionary+=$HOME/.vim/wordlists/ruby.dict
@@ -345,14 +330,14 @@ autocmd FileType ruby :set dictionary+=$HOME/.vim/wordlists/ruby.dict
 autocmd FileType erlang :set dictionary+=$HOME/.vim/wordlists/erlang.dict
 
 "python
-function! PythonSetting()
-  :set tabstop=8
-  :set softtabstop=4
-  :set shiftwidth=4
-  :set expandtab
-  :set smarttab
-endfunction
-autocmd FileType python call PythonSetting()
+autocmd FileType python :set tabstop=8
+autocmd FileType python :set softtabstop=4
+autocmd FileType python :set shiftwidth=4
+autocmd FileType python :set expandtab
+autocmd FileType python :set smarttab
+
+"javascript
+autocmd FileType javascript :set dictionary+=$HOME/.vim/wordlists/javascript.dict
 
 " NERD_comments.vim
 let NERDSpaceDelims = 1
@@ -396,3 +381,7 @@ filetype plugin on
 
 "自動改行禁止
 set textwidth=0
+
+if has('mac')
+  let mapleader=","
+endif
