@@ -4,9 +4,6 @@
 [submodule "bundle/vim-align"]
 	path = bundle/vim-align
 	url = git://github.com/tsaleh/vim-align.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = git://github.com/mattn/zencoding-vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
