@@ -23,5 +23,5 @@
 	path = bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
 [submodule "bundle/vim-endwise"]
-	path = bundlevim-endwise
+	path = bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
